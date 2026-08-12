@@ -27,8 +27,17 @@
     border-radius: 10px; padding: 22px; transition: transform 0.15s, box-shadow 0.15s;
   }
   .card:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(123,47,255,0.35); }
+  .card:hover .icone-quadro { box-shadow: 0 0 16px rgba(123,47,255,0.6); }
   .card a.abrir { text-decoration: none; color: inherit; }
-  .card h2 { font-size: 17px; margin: 0 0 8px 0; color: #7B2FFF; }
+  .cabecalho-quadro { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .icone-quadro {
+    flex-shrink: 0; width: 48px; height: 48px; border-radius: 50%; background: #1B1F2E;
+    border: 1.5px solid #7B2FFF; display: flex; align-items: center; justify-content: center;
+    transition: box-shadow 0.15s; overflow: hidden;
+  }
+  .icone-quadro img { width: 100%; height: 100%; object-fit: cover; }
+  .icone-quadro svg { width: 26px; height: 26px; }
+  .card h2 { font-size: 17px; margin: 0; color: #7B2FFF; line-height: 1.3; }
   .card p { font-size: 13px; opacity: 0.8; margin: 0; line-height: 1.5; }
   .card a.repo {
     font-size: 11px; opacity: 0.6; margin-top: 12px; color: #F2F2F2; text-decoration: none;
@@ -45,28 +54,72 @@
   <div class="cards">
     <div class="card">
       <a class="abrir" href="https://thubaraleii.github.io/taio-plumbing-system-3d/visualizacao_web/viewer_3d_taio.html">
-        <h2>Modelo 3D interativo</h2>
+        <div class="cabecalho-quadro">
+          <div class="icone-quadro" data-slot="preview_3d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7B2FFF" stroke-width="1.4" stroke-linejoin="round">
+              <polygon points="12,3 20,7.5 20,16.5 12,21 4,16.5 4,7.5" />
+              <polyline points="4,7.5 12,12 20,7.5" />
+              <line x1="12" y1="12" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h2>Modelo 3D interativo</h2>
+        </div>
         <p>Cubão 3D com topografia real, corpos intrusivos, formações sedimentares e ferramenta de corte com 4 direções. Modos de cor: hipsometria, geologia real (CPRM) e satélite.</p>
       </a>
       <a class="repo" href="https://github.com/Thubaraleii/taio-plumbing-system-3d" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="card">
       <a class="abrir" href="https://thubaraleii.github.io/taio-plumbing-system-2d/secao_interativa.html">
-        <h2>Seção transversal interativa</h2>
+        <div class="cabecalho-quadro">
+          <div class="icone-quadro" data-slot="preview_2d">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7B2FFF" stroke-width="1.4">
+              <rect x="3" y="5" width="18" height="14" rx="1"/>
+              <line x1="3" y1="10" x2="21" y2="10"/>
+              <line x1="3" y1="14" x2="21" y2="14"/>
+              <line x1="8" y1="3" x2="16" y2="21" stroke-dasharray="2,1.5"/>
+            </svg>
+          </div>
+          <h2>Seção transversal interativa</h2>
+        </div>
         <p>Mapa em planta + seção transversal sincronizados, com linha de corte rotacionável, pontos de campo, dados estruturais e camadas de referência (rios/estradas/localidades).</p>
       </a>
       <a class="repo" href="https://github.com/Thubaraleii/taio-plumbing-system-2d" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="card">
       <a class="abrir" href="https://thubaraleii.github.io/TAIO-DASH/dashboard_geoquimico.html">
-        <h2>Dashboard geoquímico</h2>
+        <div class="cabecalho-quadro">
+          <div class="icone-quadro" data-slot="preview_dash">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7B2FFF" stroke-width="1.4" stroke-linecap="round">
+              <line x1="3" y1="21" x2="21" y2="21"/>
+              <rect x="5" y="13" width="3.5" height="8" fill="#7B2FFF" stroke="none"/>
+              <rect x="10.5" y="8" width="3.5" height="13" fill="#7B2FFF" stroke="none"/>
+              <rect x="16" y="4" width="3.5" height="17" fill="#7B2FFF" stroke="none"/>
+              <circle cx="6.7" cy="10" r="1.1" fill="#7B2FFF" stroke="none"/>
+              <circle cx="12.2" cy="5.5" r="1.1" fill="#7B2FFF" stroke="none"/>
+            </svg>
+          </div>
+          <h2>Dashboard geoquímico</h2>
+        </div>
         <p>Painel com dados geoquímicos do sistema intrusivo de Taió, com visualizações para exploração dos elementos e relações geoquímicas.</p>
       </a>
       <a class="repo" href="https://github.com/Thubaraleii/TAIO-DASH" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
     <div class="card">
       <a class="abrir" href="https://thubaraleii.github.io/TAIO-WEBMAP/webmap_taio.html">
-        <h2>Webmap</h2>
+        <div class="cabecalho-quadro">
+          <div class="icone-quadro" data-slot="preview_webmap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#7B2FFF" stroke-width="1.4">
+              <rect x="3" y="3" width="18" height="18" rx="1" stroke-opacity="0.5"/>
+              <line x1="3" y1="9" x2="21" y2="9" stroke-opacity="0.35"/>
+              <line x1="3" y1="15" x2="21" y2="15" stroke-opacity="0.35"/>
+              <line x1="9" y1="3" x2="9" y2="21" stroke-opacity="0.35"/>
+              <line x1="15" y1="3" x2="15" y2="21" stroke-opacity="0.35"/>
+              <path d="M12 7c-2.2 0-4 1.7-4 3.9 0 2.9 4 7.1 4 7.1s4-4.2 4-7.1c0-2.2-1.8-3.9-4-3.9z" fill="#7B2FFF" stroke="none"/>
+              <circle cx="12" cy="10.8" r="1.3" fill="#1B1F2E" stroke="none"/>
+            </svg>
+          </div>
+          <h2>Webmap</h2>
+        </div>
         <p>Mapa em tela cheia com zoom/pan contínuo (Leaflet): pontos de campo, mapa geológico real (CPRM), sill/dique, dados estruturais e camadas de referência (rios/estradas/localidades).</p>
       </a>
       <a class="repo" href="https://github.com/Thubaraleii/TAIO-WEBMAP" target="_blank" rel="noopener">GitHub ↗</a>
