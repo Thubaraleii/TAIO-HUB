@@ -21,6 +21,10 @@ Cada aplicação é um repositório independente, publicado em GitHub Pages:
 [TAIO-DASH](https://github.com/Thubaraleii/TAIO-DASH) ·
 [TAIO-WEBMAP](https://github.com/Thubaraleii/TAIO-WEBMAP).
 
+## Idioma
+
+O botão **EN / PT** alterna a página entre português e inglês; a escolha é lembrada no navegador e repassada aos aplicativos pelo parâmetro `?lang=en`. Cada aplicativo traz também o botão **← Hub** para voltar a esta página.
+
 ## Uso
 
 Abra `index.html` no navegador ou acesse a versão publicada (GitHub Pages). Não requer instalação nem servidor.
